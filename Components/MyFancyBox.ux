@@ -22,6 +22,8 @@
 			<Change backimageHalftone.Intensity="0.9" Duration="0.3" />
     </WhileSelected>
     <Text Value="{text}" Color="White" Alignment="Center"/>
-    <SuperBox ux:Name="superBox" CornerRadius="6"/>
+    <SuperBox ux:Name="superBox" CornerRadius="6">
+      <Shadow Color="#0003" />
+    </SuperBox>
   </Panel>
 </Panel>
