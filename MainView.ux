@@ -5,13 +5,6 @@
     <Each Count="4">
       <Selection MinCount="0" MaxCount="1" />
       <Panel ux:Name="fancyBox" Width="50" Height="50">
-        <Clicked>
-          <ToggleSelection Mode="AddOnly"/>
-        </Clicked>
-        <WhileSelected>
-          <Change fancyBox.LayoutMaster="superboxLarge" Duration="1" Easing="QuadraticInOut"/>
-          <BringToFront/>
-        </WhileSelected>
         <Text Value="Hello" Color="White" Alignment="Center"/>
         <Rectangle ux:Name="superBox">
           <LinearGradient>
