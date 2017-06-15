@@ -1,24 +1,32 @@
 <App>
   <JavaScript File="MainView.js"/>
-  <Panel ux:Name="superboxLarge" />
+  <Panel ux:Name="superboxLarge" Width="150" Height="150" Alignment="TopCenter" Margin="60"/>
   <StackPanel Orientation="Horizontal" ItemSpacing="8" Alignment="Center">
-    <Each Count="4">
-      <Selection MinCount="0" MaxCount="1" />
-      <Panel ux:Name="fancyBox" Width="50" Height="50">
-        <Clicked>
-          <ToggleSelection Mode="AddOnly"/>
-        </Clicked>
-        <WhileSelected>
-          <Change fancyBox.LayoutMaster="superboxLarge" Duration="1" Easing="QuadraticInOut"/>
-          <BringToFront/>
-        </WhileSelected>
-        <Text Value="Hello" Color="White" Alignment="Center"/>
-        <Rectangle ux:Name="superBox">
-          <LinearGradient>
-            <GradientStop Offset="0" Color="Lipstick"/>
-            <GradientStop Offset="1" Color="MistGrey"/>
-          </LinearGradient>
-        </Rectangle>
+    <Each Items="{boxes}">
+      <Selection MinCount="0" MaxCount="1"/>
+      <Panel Width="80" Height="80">
+        <Panel ux:Name="fancyBox">
+          <LayoutAnimation>
+            <Move RelativeTo="WorldPositionChange" Vector="1" Duration="0.3" Easing="QuadraticInOut" />
+            <Resize Vector="1" RelativeTo="SizeChange" Duration="0.3" Easing="QuadraticInOut"/>
+          </LayoutAnimation>
+          <Selectable Value="{id}"/>
+          <Clicked>
+            <ToggleSelection/>
+          </Clicked>
+          <WhileSelected>
+            <Change fancyBox.LayoutMaster="superboxLarge"/>
+            <BringToFront/>
+            <Change superBox.CornerRadius="75" Duration="0.3" />
+          </WhileSelected>
+          <Text Value="{text}" Color="White" Alignment="Center"/>
+          <Rectangle ux:Name="superBox">
+            <LinearGradient>
+              <GradientStop Offset="0" Color="{startColor}"/>
+              <GradientStop Offset="1" Color="{endColor}"/>
+            </LinearGradient>
+          </Rectangle>
+        </Panel>
       </Panel>
     </Each>
   </StackPanel>
