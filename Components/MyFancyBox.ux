@@ -1,0 +1,27 @@
+<Panel ux:Class="MyFancyBox">
+  <Panel ux:Dependency="superboxLarge"/>
+  <Image ux:Dependency="backgroundImage" />
+  <Halftone ux:Dependency="backimageHalftone" />
+
+  <Panel ux:Name="fancyBox">
+    <LayoutAnimation>
+      <Move RelativeTo="WorldPositionChange" Vector="1" Duration="0.3" Easing="QuadraticInOut"/>
+      <Resize Vector="1" RelativeTo="SizeChange" Duration="0.3" Easing="QuadraticInOut"/>
+    </LayoutAnimation>
+    <Selectable Value="{id}"/>
+    <Clicked>
+      <ToggleSelection/>
+    </Clicked>
+    <WhileSelected>
+      <Change fancyBox.LayoutMaster="superboxLarge"/>
+      <BringToFront/>
+      <Change superBox.CornerRadius="75" Duration="0.3"/>
+      <Scale Target="backgroundImage" Vector="1.2" Duration="0.3" />
+      <Change backimageHalftone.DotTint="0.1" Duration="0.3" />
+			<Change backimageHalftone.PaperTint=".5" Duration="0.3" />
+			<Change backimageHalftone.Intensity="0.9" Duration="0.3" />
+    </WhileSelected>
+    <Text Value="{text}" Color="White" Alignment="Center"/>
+    <SuperBox ux:Name="superBox" CornerRadius="6"/>
+  </Panel>
+</Panel>

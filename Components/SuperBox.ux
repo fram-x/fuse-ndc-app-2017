@@ -1,0 +1,8 @@
+<Rectangle ux:Class="SuperBox" >
+  <float4 ux:Property="StartColor"/>
+  <float4 ux:Property="EndColor"/>
+    <LinearGradient>
+      <GradientStop Offset="0" Color="{startColor}"/>
+      <GradientStop Offset="1" Color="{endColor}"/>
+    </LinearGradient>
+</Rectangle>

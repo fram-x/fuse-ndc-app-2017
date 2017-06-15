@@ -4,30 +4,15 @@
   <StackPanel Orientation="Horizontal" ItemSpacing="8" Alignment="Center">
     <Each Items="{boxes}">
       <Selection MinCount="0" MaxCount="1"/>
-      <Panel Width="80" Height="80">
-        <Panel ux:Name="fancyBox">
-          <LayoutAnimation>
-            <Move RelativeTo="WorldPositionChange" Vector="1" Duration="0.3" Easing="QuadraticInOut" />
-            <Resize Vector="1" RelativeTo="SizeChange" Duration="0.3" Easing="QuadraticInOut"/>
-          </LayoutAnimation>
-          <Selectable Value="{id}"/>
-          <Clicked>
-            <ToggleSelection/>
-          </Clicked>
-          <WhileSelected>
-            <Change fancyBox.LayoutMaster="superboxLarge"/>
-            <BringToFront/>
-            <Change superBox.CornerRadius="75" Duration="0.3" />
-          </WhileSelected>
-          <Text Value="{text}" Color="White" Alignment="Center"/>
-          <Rectangle ux:Name="superBox">
-            <LinearGradient>
-              <GradientStop Offset="0" Color="{startColor}"/>
-              <GradientStop Offset="1" Color="{endColor}"/>
-            </LinearGradient>
-          </Rectangle>
-        </Panel>
-      </Panel>
+      <MyFancyBox Width="80" Height="80" superboxLarge="superboxLarge" backgroundImage="backgroundImage" backimageHalftone="halftone"/>
     </Each>
   </StackPanel>
+  <StackPanel Alignment="Bottom">
+    <Slider Value="{sliderValue}" Minimum="0" Maximum="1"/>
+  </StackPanel>
+  <Rectangle Opacity="{sliderValue}" Color="White">
+  </Rectangle>
+  <Image ux:Name="backgroundImage" File="Assets/halftone.png" StretchMode="UniformToFill">
+    <Halftone ux:Name="halftone" Smoothness="1" DotTint="1" PaperTint="1" Spacing="5" Intensity="0.2"/>
+  </Image>
 </App>
