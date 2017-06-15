@@ -1,0 +1,32 @@
+<Panel ux:Class="ColorPalette">
+	<float4 ux:Global="Coral" ux:Value="#EE5458" />
+	<float4 ux:Global="DarkCoral" ux:Value="#C12533" />
+	<float4 ux:Global="Salmon" ux:Value="#fa8b64" />
+	<float4 ux:Global="Lipstick" ux:Value="#e3234d" />
+	<float4 ux:Global="LipstickTwo" ux:Value="#c12533" />
+	<float4 ux:Global="SlateGrey" ux:Value="#5a6270" />
+	<float4 ux:Global="CloudyBlue" ux:Value="#a9b5ca" />
+	<float4 ux:Global="LightCloudyBlue" ux:Value="#edf0f4" />
+	<float4 ux:Global="BlueGrey" ux:Value="#8591a5" />
+	<float4 ux:Global="LightBlueGrey" ux:Value="#d4dce8" />
+	<float4 ux:Global="SystemBackground" ux:Value="#f4f6f9" />
+	<float4 ux:Global="PaleGrey" ux:Value="#eff2f7" />
+	<float4 ux:Global="SeafoamBlue" ux:Value="#59c3c3" />
+	<float4 ux:Global="LightSeafoamBlue" ux:Value="#dcfaf9" />
+	<float4 ux:Global="GunMetal" ux:Value="#484f5d" />
+	<float4 ux:Global="Gunmetal" ux:Value="#484f5d" />
+	<float4 ux:Global="MistGrey" ux:Value="#f9f9f9" />
+
+	<!-- DrawingPanel colors -->
+	<float4 ux:Global="CloudyBlueTwo" ux:Value="#a9b6ca" />
+
+	<float4 ux:Global="DrawBrushGrey" ux:Value="#5a626f" />
+	<float4 ux:Global="DrawBrushTealish" ux:Value="#33cfb7" />
+	<float4 ux:Global="DrawBrushDandelion" ux:Value="#f5d817" />
+	<float4 ux:Global="DrawBrushFadedOrange" ux:Value="#ef8851" />
+	<float4 ux:Global="DrawBrushCoral" ux:Value="#ee5458" />
+	<float4 ux:Global="DrawBrushMediumPink" ux:Value="#ef42b3" />
+	<float4 ux:Global="DrawBrushPurpley" ux:Value="#954cd7" />
+	<float4 ux:Global="DrawBrushCerulean" ux:Value="#0096d6" />
+
+</Panel>

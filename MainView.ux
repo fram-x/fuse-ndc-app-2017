@@ -1,0 +1,25 @@
+<App>
+  <JavaScript File="MainView.js"/>
+  <Panel ux:Name="superboxLarge" />
+  <StackPanel Orientation="Horizontal" ItemSpacing="8" Alignment="Center">
+    <Each Count="4">
+      <Selection MinCount="0" MaxCount="1" />
+      <Panel ux:Name="fancyBox" Width="50" Height="50">
+        <Clicked>
+          <ToggleSelection Mode="AddOnly"/>
+        </Clicked>
+        <WhileSelected>
+          <Change fancyBox.LayoutMaster="superboxLarge" Duration="1" Easing="QuadraticInOut"/>
+          <BringToFront/>
+        </WhileSelected>
+        <Text Value="Hello" Color="White" Alignment="Center"/>
+        <Rectangle ux:Name="superBox">
+          <LinearGradient>
+            <GradientStop Offset="0" Color="Lipstick"/>
+            <GradientStop Offset="1" Color="MistGrey"/>
+          </LinearGradient>
+        </Rectangle>
+      </Panel>
+    </Each>
+  </StackPanel>
+</App>
